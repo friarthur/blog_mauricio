@@ -1,156 +1,448 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maurício de Souza - Personal Trainer</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maurício de Souza | Personal Trainer</title>
+    <meta name="description" content="Personal Trainer em Porto Alegre - RS. Aulas individuais e coletivas de futebol, basquete, handebol, voleibol e skate.">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="topo">
-    <div class="container">
-      <h3>Maurício</h3>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#modalidades">Modalidades</a></li>
-        <li><a href="#local">Local</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="container">
-      <img src="mauricion.png" alt="Maurício de Souza" class="profile-img" />
-      <h1>Maurício de Souza</h1>
-      <p class="subtitle">Personal Trainer | Aulas individuais e coletivas</p>
-      <a href="#modalidades" class="cta-button">Conheça as Modalidades</a>
-    </div>
-  </header>
-
-  <section class="sobre fade-in" id="sobre">
-    <div class="container">
-      <h2>Sobre Mim</h2>
-      <p>
-        Sou o Maurício, personal trainer apaixonado por movimento, performance e transformação de vidas.
-        Ofereço aulas dinâmicas e personalizadas que respeitam o ritmo de cada aluno — seja em grupo ou individual.
-      </p>
-    </div>
-  </section>
-
-  <section class="modalidades fade-in" id="modalidades">
-    <div class="container">
-      <h2>Modalidades</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Futebol</h3>
-          <p>Campo, society e salão. Técnicas, tática e condicionamento.</p>
+    <!-- Preloader -->
+    <div class="preloader" aria-hidden="true">
+        <div class="preloader-inner">
+            <span class="preloader-text">MS</span>
         </div>
-        <div class="card">
-          <h3>Basquete</h3>
-          <p>Desenvolvimento de fundamentos e resistência física.</p>
+    </div>
+
+    <!-- Navbar -->
+    <header class="header" id="header">
+        <nav class="nav container" aria-label="Navegação principal">
+            <a href="#hero" class="logo" aria-label="Maurício de Souza - Página inicial">
+                <span class="logo-mark">MS</span>
+                <span class="logo-text">Maurício<span class="logo-accent">.</span></span>
+            </a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <div class="nav-menu" id="mobile-menu">
+                <ul class="nav-list">
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#modalidades" class="nav-link">Modalidades</a></li>
+                    <li><a href="#local" class="nav-link">Local</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+                <a href="https://wa.me/555193767649" class="btn-nav" target="_blank" rel="noopener">
+                    <span class="btn-nav-text">Agendar Aula</span>
+                    <svg class="btn-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-label="Apresentação">
+            <div class="hero-bg" aria-hidden="true">
+                <div class="hero-shape hero-shape-1"></div>
+                <div class="hero-shape hero-shape-2"></div>
+                <div class="hero-grid"></div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Personal Trainer
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="title-line">Maurício</span>
+                        <span class="title-line title-accent">de Souza</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Personal Trainer | Aulas individuais e coletivas
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#modalidades" class="btn-primary">
+                            <span>Conhecer Modalidades</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#contato" class="btn-secondary">
+                            <span>Agendar Aula</span>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-number">5</span>
+                            <span class="highlight-label">Modalidades</span>
+                        </div>
+                        <div class="highlight-divider"></div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">RS</span>
+                            <span class="highlight-label">Porto Alegre</span>
+                        </div>
+                        <div class="highlight-divider"></div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">2</span>
+                            <span class="highlight-label">Formatos de Aula</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-ring"></div>
+                        <img 
+                            src="mauricion.png" 
+                            alt="Maurício de Souza, Personal Trainer em Porto Alegre" 
+                            class="hero-image"
+                            loading="eager"
+                            width="600"
+                            height="600"
+                        >
+                    </div>
+                    <div class="hero-image-overlay" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section class="sobre section" id="sobre" aria-label="Sobre Maurício">
+            <div class="container sobre-container">
+                <div class="sobre-text">
+                    <span class="section-label">Sobre</span>
+                    <h2 class="section-title">
+                        <span class="title-accent">Sobre</span> Mim
+                    </h2>
+                    <p class="sobre-paragraph">
+                        Sou o Maurício, personal trainer <strong>apaixonado por movimento</strong>, performance e <strong>transformação de vidas</strong>.
+                    </p>
+                    <p class="sobre-paragraph">
+                        Ofereço aulas <strong>dinâmicas e personalizadas</strong> que respeitam o ritmo de cada aluno — seja <strong>em grupo ou individual</strong>.
+                    </p>
+                    <a href="#modalidades" class="btn-text">
+                        <span>Ver Modalidades</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="sobre-visual">
+                    <div class="sobre-visual-inner">
+                        <div class="sobre-shape" aria-hidden="true"></div>
+                        <div class="sobre-info">
+                            <span class="sobre-info-label">Atuação</span>
+                            <span class="sobre-info-value">Presencial e Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modalidades Section -->
+        <section class="modalidades section" id="modalidades" aria-label="Modalidades de treino">
+            <div class="container">
+                <span class="section-label">Modalidades</span>
+                <h2 class="section-title">
+                    <span class="title-accent">Treinamento</span> Especializado
+                </h2>
+                <p class="section-description">
+                    Aulas dinâmicas e personalizadas para cada esporte
+                </p>
+                
+                <div class="modalidades-layout">
+                    <div class="modalidades-list" id="modalidades-list">
+                        <button class="modalidade-btn active" data-modalidade="futebol" aria-expanded="true">
+                            <span class="modalidade-num">01</span>
+                            <span class="modalidade-name">Futebol</span>
+                            <span class="modalidade-arrow">→</span>
+                        </button>
+                        <button class="modalidade-btn" data-modalidade="basquete" aria-expanded="false">
+                            <span class="modalidade-num">02</span>
+                            <span class="modalidade-name">Basquete</span>
+                            <span class="modalidade-arrow">→</span>
+                        </button>
+                        <button class="modalidade-btn" data-modalidade="handebol" aria-expanded="false">
+                            <span class="modalidade-num">03</span>
+                            <span class="modalidade-name">Handebol</span>
+                            <span class="modalidade-arrow">→</span>
+                        </button>
+                        <button class="modalidade-btn" data-modalidade="voleibol" aria-expanded="false">
+                            <span class="modalidade-num">04</span>
+                            <span class="modalidade-name">Voleibol</span>
+                            <span class="modalidade-arrow">→</span>
+                        </button>
+                        <button class="modalidade-btn" data-modalidade="skate" aria-expanded="false">
+                            <span class="modalidade-num">05</span>
+                            <span class="modalidade-name">Skate</span>
+                            <span class="modalidade-arrow">→</span>
+                        </button>
+                    </div>
+                    
+                    <div class="modalidades-display" id="modalidades-display">
+                        <div class="modalidade-detail active" data-modalidade="futebol">
+                            <h3 class="modalidade-detail-title">Futebol</h3>
+                            <p class="modalidade-detail-text">Campo, society e salão. Técnicas, tática e condicionamento.</p>
+                        </div>
+                        <div class="modalidade-detail" data-modalidade="basquete">
+                            <h3 class="modalidade-detail-title">Basquete</h3>
+                            <p class="modalidade-detail-text">Desenvolvimento de fundamentos e resistência física.</p>
+                        </div>
+                        <div class="modalidade-detail" data-modalidade="handebol">
+                            <h3 class="modalidade-detail-title">Handebol</h3>
+                            <p class="modalidade-detail-text">Aulas em quadra e areia. Agilidade, trabalho em equipe e coordenação.</p>
+                        </div>
+                        <div class="modalidade-detail" data-modalidade="voleibol">
+                            <h3 class="modalidade-detail-title">Voleibol</h3>
+                            <p class="modalidade-detail-text">Treinamentos táticos e técnicos, ideais para grupos e escolas.</p>
+                        </div>
+                        <div class="modalidade-detail" data-modalidade="skate">
+                            <h3 class="modalidade-detail-title">Skate</h3>
+                            <p class="modalidade-detail-text">Para todas as idades. Equilíbrio, controle e diversão.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Local Section -->
+        <section class="local section" id="local" aria-label="Local de atuação">
+            <div class="container">
+                <div class="local-grid">
+                    <div class="local-info">
+                        <span class="section-label">Atuação</span>
+                        <h2 class="section-title">
+                            <span class="title-accent">Onde</span> Treino
+                        </h2>
+                        <div class="local-primary">
+                            <span class="local-city">Porto Alegre - RS</span>
+                            <p class="local-description">
+                                Atuando com aulas presenciais em academias, parques e domicílios da região.
+                            </p>
+                        </div>
+                        <div class="local-secondary">
+                            <span class="local-badge">Online</span>
+                            <p class="local-description">
+                                Também ofereço consultoria online para alunos de qualquer lugar do Brasil.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="local-visual">
+                        <div class="local-visual-inner">
+                            <div class="local-map-abstract" aria-hidden="true">
+                                <span class="map-line map-line-1"></span>
+                                <span class="map-line map-line-2"></span>
+                                <span class="map-line map-line-3"></span>
+                                <span class="map-dot map-dot-1"></span>
+                                <span class="map-dot map-dot-2"></span>
+                                <span class="map-dot map-dot-3"></span>
+                            </div>
+                            <div class="local-visual-text">
+                                <span class="local-visual-label">Porto Alegre</span>
+                                <span class="local-visual-coord">30.0346° S, 51.2177° W</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios Section -->
+        <section class="beneficios section" id="beneficios" aria-label="Benefícios do treinamento">
+            <div class="container">
+                <span class="section-label">Por que treinar comigo?</span>
+                <h2 class="section-title">
+                    <span class="title-accent">Benefícios</span> do Treino
+                </h2>
+                
+                <div class="beneficios-grid">
+                    <div class="beneficio-item">
+                        <span class="beneficio-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="4"/>
+                                <path d="M4 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/>
+                            </svg>
+                        </span>
+                        <h3 class="beneficio-title">Treinos personalizados para sua realidade</h3>
+                    </div>
+                    <div class="beneficio-item">
+                        <span class="beneficio-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
+                        </span>
+                        <h3 class="beneficio-title">Aulas dinâmicas e motivadoras</h3>
+                    </div>
+                    <div class="beneficio-item">
+                        <span class="beneficio-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </span>
+                        <h3 class="beneficio-title">Acompanhamento individual e em grupo</h3>
+                    </div>
+                    <div class="beneficio-item">
+                        <span class="beneficio-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </span>
+                        <h3 class="beneficio-title">Resultados reais com segurança e evolução</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos Section -->
+        <section class="depoimentos section" id="depoimentos" aria-label="Depoimentos de alunos">
+            <div class="container">
+                <span class="section-label">Depoimentos</span>
+                <h2 class="section-title">
+                    <span class="title-accent">O que</span> Dizem
+                </h2>
+                
+                <div class="depoimentos-grid">
+                    <figure class="depoimento-card">
+                        <div class="depoimento-quote">"</div>
+                        <blockquote class="depoimento-text">
+                            Com o Maurício consegui perder peso e ganhar disposição! Recomendo demais!
+                        </blockquote>
+                        <figcaption class="depoimento-author">— Ana L.</figcaption>
+                    </figure>
+                    
+                    <figure class="depoimento-card">
+                        <div class="depoimento-quote">"</div>
+                        <blockquote class="depoimento-text">
+                            Treinos acessíveis, focados e com resultados. Ótimo profissional.
+                        </blockquote>
+                        <figcaption class="depoimento-author">— Ricardo F.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq section" id="faq" aria-label="Perguntas frequentes">
+            <div class="container">
+                <span class="section-label">Dúvidas</span>
+                <h2 class="section-title">
+                    <span class="title-accent">Perguntas</span> Frequentes
+                </h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" id="faq-button-1">
+                            <span>Atende fora de Porto Alegre?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-button-1">
+                            <p>Sim! Faço consultoria online com treinos via WhatsApp, vídeos e acompanhamento semanal.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" id="faq-button-2">
+                            <span>As aulas são em grupo ou individuais?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-button-2">
+                            <p>Ambas! Você escolhe a modalidade conforme seus objetivos e disponibilidade.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato / CTA Final -->
+        <section class="contato section" id="contato" aria-label="Agendar aula">
+            <div class="container">
+                <div class="contato-content">
+                    <span class="section-label">Contato</span>
+                    <h2 class="section-title">
+                        <span class="title-accent">Pronto para</span> Começar?
+                    </h2>
+                    <p class="contato-description">
+                        Vamos agendar sua primeira aula ou montar seu plano de treino personalizado?
+                    </p>
+                    <a href="https://wa.me/555193767649" class="btn-primary btn-large" target="_blank" rel="noopener">
+                        <span>Agende sua Aula</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                        </svg>
+                    </a>
+                    <p class="contato-info">
+                        Entre em contato para mais informações ou para marcar sua aula experimental.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#hero" class="logo">
+                        <span class="logo-mark">MS</span>
+                        <span class="logo-text">Maurício<span class="logo-accent">.</span></span>
+                    </a>
+                    <p class="footer-tagline">Personal Trainer | Aulas individuais e coletivas</p>
+                </div>
+                
+                <nav class="footer-nav" aria-label="Links do rodapé">
+                    <a href="#sobre" class="footer-link">Sobre</a>
+                    <a href="#modalidades" class="footer-link">Modalidades</a>
+                    <a href="#local" class="footer-link">Local</a>
+                    <a href="#contato" class="footer-link">Contato</a>
+                </nav>
+                
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/prof.mauricio_souza/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram do Maurício">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/555193767649" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp do Maurício">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maurício de Souza. Todos os direitos reservados.</p>
+            </div>
         </div>
-        <div class="card">
-          <h3>Handebol</h3>
-          <p>Aulas em quadra e areia. Agilidade, trabalho em equipe e coordenação.</p>
-        </div>
-        <div class="card">
-          <h3>Voleibol</h3>
-          <p>Treinamentos táticos e técnicos, ideais para grupos e escolas.</p>
-        </div>
-        <div class="card">
-          <h3>Skate</h3>
-          <p>Para todas as idades. Equilíbrio, controle e diversão.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <section class="local fade-in" id="local">
-    <div class="container">
-      <h2>Atuação</h2>
-      <p>
-        Estou localizado em <strong>Porto Alegre - RS</strong>, atuando com aulas presenciais em academias, parques e domicílios da região.
-        Também ofereço consultoria online para alunos de qualquer lugar do Brasil.
-      </p>
-    </div>
-  </section>
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/555193767649" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar com Maurício no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+    </a>
 
-  <section class="beneficios fade-in">
-    <div class="container">
-      <h2>Por que Treinar Comigo?</h2>
-      <ul>
-        <li>✅ Treinos personalizados para sua realidade</li>
-        <li>✅ Aulas dinâmicas e motivadoras</li>
-        <li>✅ Acompanhamento individual e em grupo</li>
-        <li>✅ Resultados reais com segurança e evolução</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="depoimentos fade-in">
-    <div class="container">
-      <h2>Depoimentos de Alunos</h2>
-      <div class="card">
-        <p>“Com o Maurício consegui perder peso e ganhar disposição! Recomendo demais!”</p>
-        <span>- Ana L.</span>
-      </div>
-      <div class="card">
-        <p>“Treinos acessíveis, focados e com resultados. Ótimo profissional.”</p>
-        <span>- Ricardo F.</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="faq fade-in">
-    <div class="container">
-      <h2>Perguntas Frequentes</h2>
-      <div class="pergunta">
-        <h3>Atende fora de Porto Alegre?</h3>
-        <p>Sim! Faço consultoria online com treinos via WhatsApp, vídeos e acompanhamento semanal.</p>
-      </div>
-      <div class="pergunta">
-        <h3>As aulas são em grupo ou individuais?</h3>
-        <p>Ambas! Você escolhe a modalidade conforme seus objetivos e disponibilidade.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contato fade-in" id="contato">
-    <div class="container">
-      <h2>Agende sua Aula</h2>
-      <p>Entre em contato para mais informações ou para marcar sua aula experimental.</p>
-      <button onclick="abrirWhatsApp()">Falar com o Maurício</button>
-    </div>
-  </section>
-
-  <section class="cta-final fade-in">
-    <div class="container">
-      <h2>Pronto para Começar?</h2>
-      <p>Vamos agendar sua primeira aula ou montar seu plano de treino personalizado?</p>
-      <a href="https://wa.me/555193767649" class="botao">Falar com Maurício</a>
-    </div>
-  </section>
-
-  <footer>
-  <div class="container">
-    <p>&copy; 2025 Maurício de Souza. Todos os direitos reservados.</p>
-    <div class="social">
-      <a href="https://www.instagram.com/prof.mauricio_souza/" target="_blank">
-        <img width="48" height="48" src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="instagram-new--v1"/>
-        Instagram
-      </a>
-      <a href="https://wa.me/555193767649" target="_blank">
-        <img width="48" height="48" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/>
-        WhatsApp
-      </a>
-    </div>
-  </div>
-</footer>
-
-
-  <a href="https://wa.me/555193767649" class="whatsapp-float" target="_blank">💬</a>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
