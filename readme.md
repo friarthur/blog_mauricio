@@ -126,7 +126,7 @@ Dúvidas
 
 ## Perguntas Frequentes
 
-Sim! Faço consultoria online com treinos via WhatsApp, vídeos e acompanhamento semanal.
+Sim! Faço consultoria online com treinos via WhatsApp, vídeos e acompanhamento semanal
 
 Ambas! Você escolhe a modalidade conforme seus objetivos e disponibilidade.
 
